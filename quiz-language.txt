@@ -1,0 +1,64 @@
+# Datenstrom Yellow language
+
+Language: en
+MultichoiceCorrected: Here is the corrected test: right answers are highlighted in <b>bold</b>, wrong answers are highlighted in <del class="multichoice-error">red strikethrough</del>, at the end the score obtained is shown.
+MultichoiceDunno: Don't know
+MultichoiceButton: Correction and score
+MultichoiceResult: Right answers: <b>@right_answers out of @curr_question</b>
+MultichoiceScore: Score: <b>@score out of @max_score</b>
+MultichoiceTrue: True
+MultichoiceFalse: False
+
+Language: de
+MultichoiceCorrected: Hier ist die Korrektur des Tests: die richtigen Antworten werden <b>fett</b> hervorgehoben, die falschen Antworten werden <del class="multichoice-error">rot und durchgestrichen</del> hervorgehoben, am Ende wird die erreichte Gesamtpunktzahl angezeigt.
+MultichoiceDunno: Ich weiß nicht
+MultichoiceButton: Korrektur und Ergebnis
+MultichoiceResult: Richtige Antworten: <b>@right_answers von @curr_question</b>
+MultichoiceScore: Ergebnis: <b>@score von @max_score</b> Pünkten
+MultichoiceTrue: Wahr
+MultichoiceFalse: Falsch
+
+Language: fr
+MultichoiceCorrected: Vous trouverez ci-dessous le questionnaire correct&nbsp;: les bonnes réponses sont mises en évidence en <b>gras</b>, les mauvaises réponses sont mises en évidence en <del class="multichoice-error">rouge barré</del>, à la fin le score total obtenu est indiqué.
+MultichoiceDunno: Je ne sais pas
+MultichoiceButton: Correction et résultat
+MultichoiceResult: Bonnes rëponses: <b>@right_answers sur @curr_question</b>
+MultichoiceScore: Score: <b>@score sur @max_score</b>
+MultichoiceTrue: Vrai
+MultichoiceFalse: Faux
+
+Language: it
+MultichoiceCorrected: Di seguito è il questionario corretto: le risposte giuste sono evidenziate in <b>neretto</b>, le risposte sbagliate sono evidenziate in <del class="multichoice-error">rosso barrato</del>, alla fine viene indicato il punteggio complessivo ottenuto.
+MultichoiceDunno: Non so
+MultichoiceButton: Correzione e risultato
+MultichoiceResult: Risposte giuste: <b>@right_answers su @curr_question</b>
+MultichoiceScore: Punteggio: <b>@score su @max_score</b>
+MultichoiceTrue: Vero
+MultichoiceFalse: Falso
+
+Language: es
+MultichoiceCorrected: A continuación se muestra el cuestionario correcto: las respuestas acertadas se resaltan en <b>negrita</b>, las respuestas incorrectas se resaltan en <del class="multichoice-error">rojo tachado</del>, al final se indica la puntuación total obtenida.
+MultichoiceDunno: No sé
+MultichoiceButton: Corrección y resultado
+MultichoiceResult: Respuestas correctas: <b>@right_answers de @curr_question</b>
+MultichoiceScore: Puntuación: <b>@score de @max_score</b>
+MultichoiceTrue: Verdadero
+MultichoiceFalse: Falso
+
+Language: nl
+MultichoiceCorrected: Hieronder staat de gecorrigeerde vragenlijst: de juiste antwoorden zijn <b>vetgedrukt</b>, de verkeerde antwoorden zijn vetgedrukt in <del class="multichoice-error">rood doorgestreept</del>, aan het eind wordt de totaal behaalde score aangegeven.
+MultichoiceDunno: Weet niet
+MultichoiceButton: Correctie en score
+MultichoiceResult: Juiste antwoorden: <b>@right_answers van de @curr_question</b>
+MultichoiceScore: Score: <b>@score op @max_score</b>
+MultichoiceTrue: Waar
+MultichoiceFalse: Onwaar
+
+Language: pt
+MultichoiceCorrected: Abaixo está o questionário correto: as respostas certas são destacadas em <b>negrito</b>, as respostas erradas são destacadas em <del class="multichoice-error">vermelho riscado</b>, no final a pontuação total obtida é indicada.
+MultichoiceDunno: Não sei
+MultichoiceButton: Correcção e pontuação
+MultichoiceResult: Respostas certas: <b>@right_answers em @curr_question</b>
+MultichoiceScore: Pontuação: <b>@score em @max_score</b>
+MultichoiceTrue: Verdadeiro
+MultichoiceFalse: Falso

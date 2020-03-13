@@ -1,0 +1,44 @@
+.content dl.quiz dd {
+    margin-left: 2em;
+}
+.content dl.quiz dt {
+    font-weight: bold;
+}
+.content dl.corrected dd {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.content div#quiz-progress {
+    z-index: 1;
+    position: fixed;
+    right: 0.5em;
+    bottom: 10px;
+    width: -moz-calc(25% - 1em);
+    width: -webkit-calc(25% - 1em);
+    -o-width: calc(25% - 1em);
+    width: calc(25% - 1em);
+    background-color: #eeeeee;
+    color: black;
+    padding: 5px;
+    height: 25px;
+}
+.content div#quiz-progressbar {
+    height: 25px;
+    background-color: #74aaf2;
+    width: 0;
+}
+.content div#quiz-progresstext {
+    position:relative;
+    top:-25px;
+    text-align: right;
+}
+.content div#quiz-correction {
+    padding-left: 75px;
+    background-image: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg version='1.1' viewBox='-150 -0 662 512' height='65px' width='65px' xmlns='http://www.w3.org/2000/svg'%3E %3Cpolygon points='303.22 303.22 464.78 141.67 417.56 78.702 248.14 263.88' fill='%23BD1515'/%3E %3Cpolygon points='248.14 263.88 425.43 86.573 370.33 47.216 208.78 208.78' fill='%23F2484B'/%3E %3Cpolygon points='141.67 464.78 303.23 303.23 256.01 256.01 78.713 417.57' fill='%23185F8D'/%3E %3Cpolygon points='86.584 425.44 256.01 256.01 208.78 208.78 47.228 370.34' fill='%236DA8D6'/%3E %3Cpolygon points='441.17 23.608 512 0 488.39 70.834 449.04 62.962' fill='%23BD1515'/%3E %3Cpolygon points='464.78 141.67 488.39 70.834 441.17 23.608 370.33 47.215' fill='%23F2EBD9'/%3E %3Cpolygon points='23.608 441.17 0 512 70.834 488.39 62.962 449.04' fill='%23185F8D'/%3E %3Cpolygon points='141.67 464.78 70.834 488.39 23.608 441.17 47.215 370.33' fill='%23F2EBD9'/%3E %3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.content del.quiz-error {
+    color: red;
+}
