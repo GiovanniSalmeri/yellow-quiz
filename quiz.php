@@ -103,7 +103,7 @@ class YellowQuiz {
                 }
             }
             if (!$isResultPage) {
-                $output .= "<p></p><p><input type=\"submit\" value=\"".$this->yellow->text->get("quizButton")."\" /></p>\n";
+                $output .= "<p></p><p><input class=\"btn\" type=\"submit\" value=\"".$this->yellow->text->get("quizButton")."\" /></p>\n";
                 $output .= "</form>\n";
                 if ($time=='%') $time = $currQuestion;
                 if ($time > 0) {
