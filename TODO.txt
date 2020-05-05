@@ -1,7 +1,0 @@
-OK Aggiungere yes/no
-OK Numerazione automatica delle domande (o non numerazione, magari con * iniziale?)
-OK Stile migliore? o quello di ora già va bene?
-OK Provare Quiz
-OK Rifare lo screenshot con il nuovo stile
-OK Quando manda alla pagina dei risultati, mandare al fragment giusto!
-Se ci fosse un carattere di commento i parametri potrebbero essere come una modeline in Vim

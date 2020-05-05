@@ -37,11 +37,11 @@ class YellowQuiz {
             foreach ($lines as $line) {
                 if (!trim($line)) { // line is blank
                     // ignore
-                } elseif ($line{0}=="=") { // line contains parameters
+                } elseif ($line[0]=="=") { // line contains parameters
                     list($rightScore, $wrongScore, $time) = array_map('trim', explode(",", substr($line, 1)));
                 } elseif (preg_match('/^(\d+\.|[-+*])\s/', $line)) {
                     $questions = array_map('trim', explode('|', $line));
-                    if (!is_numeric($questions[0]{0})) $questions[0] = $currQuestion+1 . '. ' . substr($questions[0], 2);
+                    if (!is_numeric($questions[0][0])) $questions[0] = $currQuestion+1 . '. ' . substr($questions[0], 2);
                     $answerRange = range(1, count($questions)-1);
                     if (count($answerRange)==1 and ($questions[1]=='1' or $questions[1]=='0')) { // T/F
                         if ($questions[1]=='1') {
@@ -132,7 +132,7 @@ class YellowQuiz {
         $text = preg_replace("/!\[(.*?)\]\((https?:\/\/[^ )]+)\)/", "<img src=\"$2\" alt=\"$1\" />", $text);
         $text = preg_replace("/\[(.*?)\]\((https?:\/\/[^ )]+)\)/", "<a href=\"$2\">$1</a>", $text);
         $text = preg_replace("/(?<!\()(https?:\/\/[^ )]+)(?!\))/", "<a href=\"$1\">$1</a>", $text);
-        if ($text{0}=='#') {
+        if ($text[0]=='#') {
             $text = preg_replace_callback('/^(#+)\s*(.*)/', function($m) { $h = strlen($m[1]); return "<h{$h}>".$m[2]."</h{$h}>"; }, $text);
         } elseif ($p) {
             $text = "<p>".$text."</p>";
