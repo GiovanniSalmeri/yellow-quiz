@@ -1,16 +1,8 @@
-Quiz 0.8.11
-=============
+# Quiz 0.8.16
+
 Extension for self-assessment tests (multiple-choice and true/false).
 
 <p align="center"><img src="quiz-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
-
-## How to install extension
-
-1. [Download and install Datenstrom Yellow](https://github.com/datenstrom/yellow/).
-2. [Download extension](../../archive/master.zip). If you are using Safari, right click and select 'Download file as'.
-3. Copy `master.zip` into your `system/extensions` folder.
-
-To uninstall delete the [extension files](extension.ini).
 
 ## How to create a test
 
@@ -34,13 +26,7 @@ The following compulsory argument is available:
 
 This will create a form in which the defined test can be filled in. If a maximum time is set, a stopwatch will be shown. After signalling the completion of the test (or when the time available is elapsed), the corrected test and the resulting score are shown.
 
-## Settings
-
-The following setting can be configured in file `system/settings/system.ini`:
-
-`MultichoiceDir` = (default: `media/quiz/`) = directory for test definitions
-  
-## Examples
+## Example
 
 A complete example of a test definition:
 
@@ -63,6 +49,16 @@ Embedding a test:
 
     [quiz test.txt]
 
+## Settings
+
+The following setting can be configured in file `system/settings/system.ini`:
+
+`MultichoiceDir` = (default: `media/quiz/`) = directory for test definitions
+  
+## Installation
+
+[Download extension](https://github.com/GiovanniSalmeri/yellow-quiz/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
+
 ## Developer
 
-Giovanni Salmeri. [Get support](https://github.com/GiovanniSalmeri/yellow-quiz/issues).
+Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-quiz/issues).

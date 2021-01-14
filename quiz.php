@@ -1,17 +1,16 @@
 <?php
-// Quiz extension
-// Copyright (c) 2020 Giovanni Salmeri, https://github.com/GiovanniSalmeri/yellow-quiz
+// Quiz extension, https://github.com/GiovanniSalmeri/yellow-quiz
+// Copyright (c) 2020-2021 Giovanni Salmeri
 // This file may be used and distributed under the terms of the public license.
 
 class YellowQuiz {
-    const VERSION = "0.8.10";
-    const TYPE = "feature";
+    const VERSION = "0.8.16";
     public $yellow;         //access to API
     
     // Handle initialisation
     public function onLoad($yellow) {
         $this->yellow = $yellow;
-        $this->yellow->system->setDefault("quizDir", "media/quiz/");
+        $this->yellow->system->setDefault("quizDirectory", "media/quiz/");
     }
     
     // Handle page content of shortcut
@@ -19,19 +18,19 @@ class YellowQuiz {
         $output = null;
         if ($name=="quiz" && ($type=="block" || $type=="inline")) {
             list($rightScore, $wrongScore, $time) = [1, '%', '%']; // default
-            $tfStrings = [$this->yellow->text->get("quizFalse"), $this->yellow->text->get("quizTrue")];
-            $dunnoString = $this->yellow->text->get("quizDunno");
-            $lines = @file($this->yellow->system->get("quizDir").$text);
+            $tfStrings = [$this->yellow->language->getText("quizFalse"), $this->yellow->language->getText("quizTrue")];
+            $dunnoString = $this->yellow->language->getText("quizDunno");
+            $lines = @file($this->yellow->system->get("quizDirectory").$text);
             if (!$lines) return;
             $currQuestion = 0;
             $rightAnswers = $score = 0;
-            $isResultPage = isset($_POST['quest']);
+            $isResultPage = $this->yellow->page->getRequest('quest');
             if (!$isResultPage) {
                 // add #quiz-correction if you use [quiz] shortcut low in the page
                 $output .= "<form id=\"quiz-form\" method=\"post\" action=\"".$this->yellow->page->getUrl()."\">\n"; 
             } else {
                 $output .= "<div id=\"quiz-correction\" class=\"notice1\">";
-                $output .= $this->yellow->text->get("quizCorrected");
+                $output .= $this->yellow->language->getText("quizCorrected");
                 $output .= "</div>\n";
             }
             foreach ($lines as $line) {
@@ -73,9 +72,9 @@ class YellowQuiz {
                         $output .= "<dd><label><input checked=\"checked\" type=\"radio\" value=\"0\" name=\"quest[{$currQuestion}]\" />{$dunnoString}</label></dd>\n"; // at the end, with value 0
                         $output .= "</dl>\n";
                     } else { // is the page with the corrected test
-                        $answers = explode(",", $_POST['quest_ord'][$currQuestion]); // casting in int is automatic
+                        $answers = explode(",", $this->yellow->page->getRequest('quest_ord')[$currQuestion]); // casting in int is automatic
                         $output .= "<dl class=\"quiz corrected\">\n<dt>".$this->toHTML($questions[0], false)."</dt>\n"; // is the question
-                        $givenAnswer = $_POST['quest'][$currQuestion];
+                        $givenAnswer = $this->yellow->page->getRequest('quest')[$currQuestion];
                         foreach ($answerRange as $i) { // answers
                             if ($answers[$i-1]==1) { // if right
                                 $output .= "<dd><b>".$this->toHTML($questions[$answers[$i-1]], false)."</b></dd>";
@@ -103,7 +102,7 @@ class YellowQuiz {
                 }
             }
             if (!$isResultPage) {
-                $output .= "<p></p><p><input class=\"btn\" type=\"submit\" value=\"".$this->yellow->text->get("quizButton")."\" /></p>\n";
+                $output .= "<p></p><p><input class=\"btn\" type=\"submit\" value=\"".$this->yellow->language->getText("quizButton")."\" /></p>\n";
                 $output .= "</form>\n";
                 if ($time=='%') $time = $currQuestion;
                 if ($time > 0) {
@@ -115,8 +114,8 @@ class YellowQuiz {
             } else {
                 $maxScore = $currQuestion*$rightScore;
                 $output .= "<div class=\"notice1\">";
-                $output .= "<p>".str_replace(["@right_answers", "@curr_question"], [$rightAnswers, $currQuestion], $this->yellow->text->get("quizResult"))."<br />";
-                $output .= str_replace(["@score", "@max_score"], [round($score,1), $maxScore], $this->yellow->text->get("quizScore"))."</p>";
+                $output .= "<p>".str_replace(["@right_answers", "@curr_question"], [$rightAnswers, $currQuestion], $this->yellow->language->getText("quizResult"))."<br />";
+                $output .= str_replace(["@score", "@max_score"], [round($score,1), $maxScore], $this->yellow->language->getText("quizScore"))."</p>";
                 $output .= "</div>";
             }
         }
