@@ -51,7 +51,7 @@ Embedding a test:
 
 ## Settings
 
-The following setting can be configured in file `system/settings/system.ini`:
+The following setting can be configured in file `system/extensions/yellow-system.ini`:
 
 `MultichoiceDir` = (default: `media/quiz/`) = directory for test definitions
   
