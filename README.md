@@ -1,6 +1,6 @@
 # Quiz 0.8.16
 
-Extension for self-assessment tests (multiple-choice and true/false).
+Self-assessment tests (multiple-choice and true/false).
 
 <p align="center"><img src="quiz-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
 
@@ -53,7 +53,7 @@ Embedding a test:
 
 The following setting can be configured in file `system/extensions/yellow-system.ini`:
 
-`MultichoiceDir` = (default: `media/quiz/`) = directory for test definitions
+`QuizDirectory` = (default: `media/quiz/`) = directory for test definitions
   
 ## Installation
 
