@@ -1,7 +1,5 @@
 <?php
 // Quiz extension, https://github.com/GiovanniSalmeri/yellow-quiz
-// Copyright (c) 2020-2021 Giovanni Salmeri
-// This file may be used and distributed under the terms of the public license.
 
 class YellowQuiz {
     const VERSION = "0.8.16";

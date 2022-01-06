@@ -1,3 +1,5 @@
+// Quiz extension, https://github.com/GiovanniSalmeri/yellow-quiz
+
 "use strict";
 document.addEventListener("DOMContentLoaded", function() {
     var t = document.getElementById('quiz-progresstext');
