@@ -16,7 +16,7 @@ In question lines and literal lines you can use `*` for italic, `**` for bold, `
 
 See below an example.
 
-## How to embed a test
+## How to show a test
 
 After defining the test, create a `[quiz]` shortcut.
 
@@ -45,7 +45,7 @@ All human beings are born free and equal in dignity and rights. They are endowed
 + What does the expression *human beings* refer to? | To men and women together | Only to men | Only to women | Only to children | To men, women, and pets
 ```
 
-Embedding a test:
+Showing a test:
 
     [quiz test.txt]
 
