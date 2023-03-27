@@ -4,6 +4,10 @@ Self-assessment tests (multiple-choice and true/false).
 
 <p align="center"><img src="quiz-screenshot.png?raw=true" alt="Screenshot"></p>
 
+## How to install an extension
+
+[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-quiz/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+
 ## How to create a test
 
 Define the test in a text file with whichever filename you like and put it into `media/quiz/`. There are three kinds of lines you can use.
@@ -26,7 +30,7 @@ The following compulsory argument is available:
 
 This will create a form in which the defined test can be filled in. If a maximum time is set, a stopwatch will be shown. After signalling the completion of the test (or when the time available is elapsed), the corrected test and the resulting score are shown.
 
-## Example
+## Examples
 
 A complete example of a test definition:
 
@@ -51,14 +55,10 @@ Showing a test:
 
 ## Settings
 
-The following setting can be configured in file `system/extensions/yellow-system.ini`:
+The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `QuizDirectory` = (default: `media/quiz/`) = directory for test definitions
   
-## Installation
-
-[Download extension](https://github.com/GiovanniSalmeri/yellow-quiz/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
-
 ## Developer
 
 Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
