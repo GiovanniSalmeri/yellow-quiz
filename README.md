@@ -4,9 +4,13 @@ Self-assessment tests (multiple-choice and true/false).
 
 <p align="center"><img src="quiz-screenshot.png?raw=true" alt="Screenshot"></p>
 
+## How to install an extension
+
+[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-quiz/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+
 ## How to create a test
 
-Define the test in a text file with whichever filename you like and put it into `media/quiz/`. There are three kinds of lines you can use.
+Define the test in a text file with whichever file name you like and put it into `media/quiz/`. There are three kinds of lines you can use.
 
 + Question line: it is in the form of a list item in Markdown (it begins for example with `2. ` or `+ `) and contains the question and the answers from which to choose, all separated by a `|`. The right answer must be put in first position (in the webpage the answers will be shown shuffled). The number of answers need not be the same in each question of the test. If you want to define a true/false item, instead of the answers put `1` if the item is true or `0` if it is false. Question lines in the form of a unordered list item (i.e. beginning with `* `, `+ `, or `- `) are automatically numbered: so use this form in order to avoid manually renumbering the questions after editing or rearranging them.
 + Options line: it begins with the `=` sign and contains (divided by a comma) the score for right answers, the score for wrong answers, the maximum number of minutes to complete the test (`0` means no limit of time, `%` means as many minutes as there are questions). When the score for wrong answers has the special value `%`, a proper value is calculated for each question in order to neutralise the effect of casual answers. The default for the options line is `+1,%,%`.
@@ -22,11 +26,11 @@ After defining the test, create a `[quiz]` shortcut.
 
 The following compulsory argument is available:
 
-`Location` = filename of the test to show  
+`Name` = file name of the test to show  
 
 This will create a form in which the defined test can be filled in. If a maximum time is set, a stopwatch will be shown. After signalling the completion of the test (or when the time available is elapsed), the corrected test and the resulting score are shown.
 
-## Example
+## Examples
 
 A complete example of a test definition:
 
@@ -51,14 +55,10 @@ Showing a test:
 
 ## Settings
 
-The following setting can be configured in file `system/extensions/yellow-system.ini`:
+The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
 `QuizDirectory` = (default: `media/quiz/`) = directory for test definitions
   
-## Installation
-
-[Download extension](https://github.com/GiovanniSalmeri/yellow-quiz/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
-
 ## Developer
 
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
