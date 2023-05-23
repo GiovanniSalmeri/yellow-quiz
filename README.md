@@ -57,7 +57,7 @@ Showing a test:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`:
 
-`QuizDirectory` = (default: `media/quiz/`) = directory for test definitions
+`QuizDirectory` = directory for test definitions  
   
 ## Developer
 
