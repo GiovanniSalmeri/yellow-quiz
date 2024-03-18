@@ -9,7 +9,7 @@ class YellowQuiz {
     public function onLoad($yellow) {
         $this->yellow = $yellow;
         $this->yellow->system->setDefault("quizDirectory", "media/quiz/");
-        $this->yellow->language->setDefaults([
+        $this->yellow->language->setDefaults(array(
             "Language: en",
             "QuizCorrected: Here is the corrected test: right answers are highlighted in <b>bold</b>, wrong answers are highlighted in <del class=\"multichoice-error\">red strikethrough</del>, at the end the score obtained is shown.",
             "QuizDunno: Don't know",
@@ -66,7 +66,7 @@ class YellowQuiz {
             "QuizScore: Pontuação: <b>@score em @max_score</b>",
             "QuizTrue: Verdadeiro",
             "QuizFalse: Falso",
-        ]);
+        ));
     }
     
     // Handle page content of shortcut
