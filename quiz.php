@@ -2,7 +2,7 @@
 // Quiz extension, https://github.com/GiovanniSalmeri/yellow-quiz
 
 class YellowQuiz {
-    const VERSION = "0.8.16";
+    const VERSION = "0.9.1";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -70,7 +70,7 @@ class YellowQuiz {
     }
     
     // Handle page content of shortcut
-    public function onParseContentShortcut($page, $name, $text, $type) {
+    public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="quiz" && ($type=="block" || $type=="inline")) {
             list($rightScore, $wrongScore, $time) = [1, '%', '%']; // default
@@ -83,7 +83,7 @@ class YellowQuiz {
             $isResultPage = $this->yellow->page->getRequest('quest');
             if (!$isResultPage) {
                 // add #quiz-correction if you use [quiz] shortcut low in the page
-                $output .= "<form id=\"quiz-form\" method=\"post\" action=\"".$this->yellow->page->getUrl()."\">\n"; 
+                $output .= "<form id=\"quiz-form\" method=\"post\" action=\"".$this->yellow->page->getUrl(true)."\">\n"; 
             } else {
                 $output .= "<div id=\"quiz-correction\" class=\"notice1\">";
                 $output .= $this->yellow->language->getText("quizCorrected");
@@ -199,9 +199,9 @@ class YellowQuiz {
     public function onParsePageExtra($page, $name) {
         $output = null;
         if ($name=="header") {
-            $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
-            $output .= "<script type=\"text/javascript\" defer=\"defer\" src=\"{$extensionLocation}quiz.js\"></script>\n";
-            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}quiz.css\" />\n";
+            $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
+            $output .= "<script type=\"text/javascript\" defer=\"defer\" src=\"{$assetLocation}quiz.js\"></script>\n";
+            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}quiz.css\" />\n";
         }
         return $output;
     }

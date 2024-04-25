@@ -1,4 +1,4 @@
-# Quiz 0.8.16
+# Quiz 0.9.1
 
 Self-assessment tests (multiple-choice and true/false).
 
