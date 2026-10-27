@@ -2,7 +2,7 @@
 // Quiz extension, https://github.com/GiovanniSalmeri/yellow-quiz
 
 class YellowQuiz {
-    const VERSION = "0.9.1";
+    const VERSION = "1.0.0";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -200,8 +200,8 @@ class YellowQuiz {
         $output = null;
         if ($name=="header") {
             $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
-            $output .= "<script type=\"text/javascript\" defer=\"defer\" src=\"{$assetLocation}quiz.js\"></script>\n";
-            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}quiz.css\" />\n";
+            $output .= "<script defer=\"defer\" src=\"{$assetLocation}quiz.js\"></script>\n";
+            $output .= "<link rel=\"stylesheet\" media=\"all\" href=\"{$assetLocation}quiz.css\" />\n";
         }
         return $output;
     }

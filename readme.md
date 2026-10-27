@@ -1,8 +1,8 @@
-# Quiz 0.9.1
+# Quiz 1.0.0
 
-Self-assessment tests (multiple-choice and true/false).
+Self-assessment tests (multiple-choice and true/false). Developed by Giovanni Salmeri.
 
-<p align="center"><img src="SCREENSHOT.png" alt="Screenshot"></p>
+<p align="center"><img src="screenshot.png" alt="Screenshot"></p>
 
 ## How to install an extension
 
@@ -57,6 +57,4 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 `QuizDirectory` = directory for test definitions  
   
-## Developer
-
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
+Do you have questions? [Get help](https://datenstrom.se/yellow/help/).
